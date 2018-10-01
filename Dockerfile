@@ -23,4 +23,7 @@ COPY start.sh /root/start.sh
 
 RUN chmod 755 /root/start.sh
 
+EXPOSE 6800
+EXPOSE 80
+
 CMD ["/root/start.sh"]
