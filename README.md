@@ -1,4 +1,4 @@
-# aria2-nginx-alpine-webui
+# aria2-nginx-alpine-ariang
 
 - Dockerfile定制使用基础镜像为基于alpine的nginx(nginx:1.15.4-alpine)
 - 镜像制作完成大小约29MB
@@ -29,7 +29,7 @@ aria2相关的配置文件，文件注释已经有大部分说明；
 
 执行一下命令进行默认构建镜像操作:
 ```
-git clone https://github.com/hdfg159/aria2-nginx-alpine-webui.git \
+git clone -b ariang https://github.com/hdfg159/aria2-nginx-alpine-webui.git \
 && cd aria2-nginx-alpine-webui \
 && chmod 755 shell.sh \
 && ./shell.sh
@@ -40,15 +40,15 @@ git clone https://github.com/hdfg159/aria2-nginx-alpine-webui.git \
 
 eg:
 ```
-docker build -t aria2-nginx-alpine . \
-&& docker run --name=aria2-nginx-80 --restart=always -v <主机存放目录>:/home -p <nginx端口>:80 -p <aria2 rpc 端口>:6800 -itd aria2-nginx-alpine  
+docker build -t hdfg159/aria2-nginx-ariang . \
+&& docker run --name=aria2-nginx-ariang-80 --restart=always -v <主机存放目录>:/home -p <nginx端口>:80 -p <aria2 rpc 端口>:6800 -itd hdfg159/aria2-nginx-ariang  
 ```
 如果需要额外指定主机上nginx配置和主机上的aria2配置需要添加一些参数，请修改shell.sh:
 
 eg:
 ```
-docker build -t aria2-nginx-alpine . \
-&& docker run --name=aria2-nginx-80 --restart=always -v <主机存放目录>:/home -p <nginx端口>:80 -p <aria2 rpc 端口>:6800 -v <nginx.conf路径>:/etc/nginx/nginx.conf -v <aria2.conf路径>:/root/.aria2/aria2.conf -itd aria2-nginx-alpine  
+docker build -t hdfg159/aria2-nginx-ariang . \
+&& docker run --name=aria2-nginx-ariang-80 --restart=always -v <主机存放目录>:/home -p <nginx端口>:80 -p <aria2 rpc 端口>:6800 -v <nginx.conf路径>:/etc/nginx/nginx.conf -v <aria2.conf路径>:/root/.aria2/aria2.conf -itd hdfg159/aria2-nginx-ariang 
 ```
 ### 反馈
 
@@ -56,7 +56,7 @@ docker build -t aria2-nginx-alpine . \
 
 ### 链接
 
-- [webui-aria2](https://github.com/ziahamza/webui-aria2)
+- [AriaNg](https://github.com/mayswind/AriaNg)
 
 - [docker-nginx](https://github.com/nginxinc/docker-nginx)
 
