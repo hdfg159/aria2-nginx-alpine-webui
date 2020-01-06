@@ -1,6 +1,6 @@
 # aria2-nginx-alpine-ariang
 
-- Dockerfile定制使用基础镜像为基于alpine的nginx(nginx:1.15.4-alpine)
+- Dockerfile定制使用基础镜像为基于alpine的nginx(nginx:alpine)
 - 镜像制作完成大小约29MB
 - 可以使用自定义配置或者默认配置
 
