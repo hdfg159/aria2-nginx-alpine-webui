@@ -1,4 +1,4 @@
-FROM nginx:1.15.4-alpine
+FROM nginx:alpine
 
 LABEL maintainer="hdfg159 <hdfg159@126.com>"
 
